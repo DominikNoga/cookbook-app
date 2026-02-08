@@ -14,9 +14,9 @@ export default function App() {
   return (
     <div style={{ padding: 16 }}>
       <h1>Cookbooks</h1>
-      <div>
-        Hello world! This is the frontend of the cookbook app.
-      </div>
+      <h1 className="text-3xl font-bold underline">
+        Hello world!
+      </h1>
       <p>API health: {health}</p>
     </div>
   );
