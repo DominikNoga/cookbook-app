@@ -1,0 +1,19 @@
+{
+  "name": "cookbook-app",
+  "private": true,
+  "workspaces": [
+    "apps/*"
+  ],
+  "engines": {
+    "node": ">=20"
+  },
+  "scripts": {
+    "lint": "npm -w apps/web run lint && npm -w apps/api run lint",
+    "test": "npm -w apps/web run test && npm -w apps/api run test",
+    "build": "npm -w apps/web run build && npm -w apps/api run build",
+    "dev": "concurrently --raw --names 'web,api' --prefix-colors 'blue,magenta' \"npm -w apps/web run dev\" \"npm -w apps/api run dev\""
+  },
+  "devDependencies": {
+    "concurrently": "^9.2.1"
+  }
+}
