@@ -1,6 +1,6 @@
 import { NavLink } from 'react-router-dom';
 import { NavigationMenu, NavigationMenuList, NavigationMenuItem } from '@/components/ui/navigation-menu';
-import Button from '@/components/ui/Button/Button';
+import Button from '@/components/ui/button';
 import ModeToggle from '@/components/mode-toggle';
 
 export function NavBar() {
@@ -12,12 +12,10 @@ export function NavBar() {
   return (
     <header className='border-b bg-background'>
       <div className='container mx-auto flex h-16 items-center justify-between px-4'>
-        {/* Logo / Brand */}
         <NavLink to='/explore' className='text-lg font-semibold'>
           Cookbooks
         </NavLink>
 
-        {/* Main Navigation */}
         <NavigationMenu>
           <NavigationMenuList className='gap-4'>
             <NavigationMenuItem>
@@ -55,9 +53,8 @@ export function NavBar() {
           </NavigationMenuList>
         </NavigationMenu>
 
-        {/* Right Side */}
         <div className='flex items-center gap-2'>
-          <Button variant='ghost' asChild>
+          <Button variant='outline' asChild>
             <NavLink to='/auth/sign-in'>Sign in</NavLink>
           </Button>
 
